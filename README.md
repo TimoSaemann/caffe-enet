@@ -1,7 +1,7 @@
 # Caffe-ENet
-**This is a modified version of [Caffe](https://github.com/BVLC/caffe) which supports the [ENet architecture](https://arxiv.org/abs/1606.02147)**
+**This is a modified version of [Caffe](https://github.com/BVLC/caffe) which supports the [ENet architecture](https://arxiv.org/abs/1606.02147).**
 
-It comes as a fork of [Caffe-SegNet-cuDNN5](https://github.com/TimoSaemann/caffe-segnet-cudnn5) with a slightly adapted Dense-Image-Data-Layer and a new layer: spatial dropout (python layer).
+It comes as a fork of [Caffe-SegNet-cuDNN5](https://github.com/TimoSaemann/caffe-segnet-cudnn5) with a slightly adapted dense-image-data-layer and a new layer: spatial dropout (python layer).
 
 Credit: Alex Kendall for his [caffe-segnet](https://github.com/alexgkendall/caffe-segnet) repository, which is the basis for this. 
 
