@@ -132,6 +132,7 @@ void Classifier::Visualization(Blob<float>* output_layer, string LUT_file) {
   merged_output_image.convertTo(merged_output_image, CV_8U);
   cv::cvtColor(merged_output_image.clone(), merged_output_image, CV_GRAY2BGR);
   cv::Mat label_colours = cv::imread(LUT_file,1);
+  cv::cvtColor(label_colours, label_colours, CV_RGB2BGR);
   cv::Mat output_image;
   LUT(merged_output_image, label_colours, output_image);
 
@@ -199,7 +200,7 @@ int main(int argc, char** argv) {
   if (argc != 5) {
     std::cerr << "Usage: " << argv[0]
               << " \ndeploy.prototxt \nnetwork.caffemodel"
-              << " \nimg.jpg" << " \ncamvid12.png (for example: /SegNet-Tutorial/Scripts/camvid12.png)" << std::endl;
+              << " \nimg.jpg" << " \ncityscapes19.png (for example: /ENet/scripts/cityscapes19.png)" << std::endl;
     return 1;
   }
 

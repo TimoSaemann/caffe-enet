@@ -691,6 +691,8 @@ message DenseImageDataParameter {
   // It will also resize images if new_height or new_width are not zero.
   optional uint32 new_height = 5 [default = 0];
   optional uint32 new_width = 6 [default = 0];
+  // Label gets divided by this factor, to train the encoder architecture of ENet.
+  optional uint32 label_divide_factor = 13 [default = 1];
   // Specify if the images are color or gray
   optional bool is_color = 7 [default = true];
   optional string mean_file = 8;
@@ -825,6 +827,8 @@ message ImageDataParameter {
   // It will also resize images if new_height or new_width are not zero.
   optional uint32 new_height = 9 [default = 0];
   optional uint32 new_width = 10 [default = 0];
+  // Label gets divided by this factor, to train the encoder architecture of ENet.
+  optional uint32 label_divide_factor = 13 [default = 1];
   // Specify if the images are color or gray
   optional bool is_color = 11 [default = true];
   // DEPRECATED. See TransformationParameter. For data pre-processing, we can do
