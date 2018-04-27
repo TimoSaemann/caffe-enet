@@ -125,7 +125,7 @@ void DataTransformer<Dtype>::Transform(const Datum& datum,
 template<typename Dtype>
 void DataTransformer<Dtype>::Transform(const Datum& datum,
                                        Blob<Dtype>* transformed_blob) {
-  // If datum is encoded, decoded and transform the cv::image.
+  // If datum is encoded, decode and transform the cv::image.
   if (datum.encoded()) {
     CHECK(!param_.force_color() && !param_.force_gray())
         << "cannot set both force_color and force_gray";
